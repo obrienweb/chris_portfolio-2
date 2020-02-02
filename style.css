@@ -23,7 +23,8 @@ html {
 body {
   font-family: "proxima-nova", sans-serif;
   font-size: 1.6rem;
-  color: #141414;
+  color: #fff;
+  background: #0A0A0A;
   font-weight: 300;
   letter-spacing: 0.5px;
   -webkit-font-smoothing: antialiased;
@@ -35,21 +36,22 @@ h1, h2, h3, h4 {
 }
 
 h1, h2 {
-  text-transform: uppercase;
-  font-size: 4.6875em;
+  font-weight: 100;
 }
 
 h1 {
-  font-weight: 700;
+  font-size: 8rem;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-weight: 700;
+  font-size: 8rem;
 }
 
 h3 {
   font-size: 1.5em;
   font-weight: 300;
+  color: #808080;
 }
 
 h4 {
@@ -81,7 +83,7 @@ a:hover {
 
 p {
   padding: 1rem 0;
-  line-height: 2;
+  line-height: 2.2;
 }
 
 ul, ol {
@@ -357,11 +359,6 @@ svg #O {
     stroke-dashoffset: 0;
   }
 }
-.website-wrapper {
-  position: relative;
-  margin-bottom: 70rem;
-}
-
 .banner {
   width: 100%;
   height: 100vh;
@@ -371,6 +368,9 @@ svg #O {
 }
 .banner hr {
   margin-bottom: 30px;
+}
+.banner h3 {
+  color: #fff;
 }
 
 .title-area {
@@ -439,62 +439,42 @@ hr {
   display: block;
 }
 
-#about {
-  position: relative;
-  background: #ffae00;
+.about {
+  padding: 20rem 0;
 }
-#about .content-title {
-  position: sticky;
-  top: 0;
-  height: 100%;
-  background: #ffae00;
-  color: #fff;
+.about--top {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#about .content-title hr {
-  background: #e69d00;
+.about--top img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
 }
-#about .portrait {
-  background: url(images/Chris-OBrien.jpg) no-repeat top center;
-  background-size: cover;
-  width: 250px;
-  height: 250px;
-  margin: 35px auto 0;
-  border-radius: 50%;
-}
-#about article {
-  background: #fff;
-}
-#about .about-content {
-  padding: 10%;
-}
-#about .about-content p:not(:first-child) {
-  padding: 15px 0;
-}
-#about .about-content strong {
-  color: #ffae00;
-  font-weight: 400;
-  padding: 0 5px;
-  font-size: 18px;
-}
-#about .about-content strong:first-of-type {
-  padding-left: 0;
-}
-#about .social {
-  text-align: left;
-  margin-top: 15px;
-}
-#about h4 {
-  padding-top: 5rem;
-  overflow: hidden;
+.about--title {
+  padding-left: 7%;
+  margin-left: 7%;
   position: relative;
 }
-
-.about-title {
-  margin: 40px 0 !important;
+.about--title::before {
+  content: "";
+  background: #ffae00;
+  width: 3px;
+  height: 150px;
+  position: absolute;
+  left: 0;
+}
+.about--content {
+  padding: 15rem 1.5rem;
+  float: none;
+  margin: auto;
 }
 
 #portfolio {
-  background: #fdfdfd;
+  background: #0A0A0A;
   padding: 0 0 120px;
 }
 #portfolio .grid-container {
@@ -560,7 +540,7 @@ hr {
   position: relative;
 }
 .project--logo {
-  margin: auto;
+  margin: 10rem auto;
   text-align: center;
   position: relative;
   z-index: 5;
@@ -573,8 +553,8 @@ hr {
   font-weight: 400;
 }
 .details > div {
-  border-top: 1px solid #ffae00;
-  border-bottom: 1px solid #ffae00;
+  border-top: 1px solid #D44C56;
+  border-bottom: 1px solid #D44C56;
   padding: 4rem 0;
   font-size: 2rem;
   display: -webkit-flex;
@@ -600,11 +580,6 @@ hr {
 }
 
 #contact {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -200;
   background: #141414;
   color: #fff;
   text-align: center;
@@ -724,17 +699,25 @@ footer i {
     font-size: 1.2em;
   }
 
-  #about .content-title {
-    position: relative;
-  }
-  #about .flex {
+  .about--top {
     flex-direction: column;
   }
-  #about .about-content {
-    line-height: 30px;
+  .about--title {
+    padding: 5rem 0 0;
+    margin: 6rem 0 0;
+    text-align: center;
   }
-  #about .social {
-    margin-bottom: 20px;
+  .about--title::before {
+    content: "";
+    background: #D44C56;
+    width: 200px;
+    height: 3px;
+    top: 0;
+    right: 0;
+    margin: auto;
+  }
+  .about--content {
+    padding: 7rem 1.5rem;
   }
 
   .title-area h1 {
@@ -763,17 +746,6 @@ footer i {
 }
 /*MOBILE */
 @media only screen and (max-width: 960px) and (min-width: 740px) {
-  #about .content-title {
-    position: relative;
-  }
-  #about .flex {
-    flex-direction: column;
-  }
-
-  .about-title {
-    margin: 25px 0 15px !important;
-  }
-
   #portfolio ul li {
     transition-delay: 0s;
   }
@@ -785,13 +757,6 @@ footer i {
 }
 /*TABLET */
 @media only screen and (max-width: 1024px) and (min-width: 960px) {
-  #about .content-title {
-    position: relative;
-  }
-  #about .flex {
-    flex-direction: column;
-  }
-
   #portfolio ul li {
     transition-delay: 0s;
   }

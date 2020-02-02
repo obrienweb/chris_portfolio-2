@@ -16,6 +16,7 @@ $dark-bg: #0A0A0A
 $white: #fff
 $gray: #282828
 $light-gray: #e0e0e0
+$red: #D44C56
 
 $small: 300px
 $medium: 768px
@@ -49,7 +50,8 @@ html
 body
   font-family: $font-stack
   font-size: $font-size
-  color: $dark
+  color: $white
+  background: $dark-bg
   font-weight: 300
   letter-spacing: .5px
   -webkit-font-smoothing: antialiased
@@ -59,19 +61,23 @@ h1, h2, h3, h4
   line-height: 1.2
 
 h1, h2
-  text-transform: uppercase
-  font-size: 4.6875em
+  //text-transform: uppercase
+  font-weight: 100
 
 h1
-  font-weight: 700
+  font-size: 8rem
+  text-transform: uppercase
+  //font-weight: 700
 
 h2
+  font-size: 8rem
   //font-size: 1.5em
-  font-weight: 700
+  //font-weight: 700
 
 h3
   font-size: 1.5em
   font-weight: 300
+  color: #808080
 
 h4
   font-size: 1.375em
@@ -98,7 +104,9 @@ a
 
 p
   padding: 1rem 0
-  line-height: 2
+  line-height: 2.2
+  // text-align: justify
+  // text-justify: inter-word
 
 ul, ol
   clear: both
@@ -329,8 +337,10 @@ svg
   to
     stroke-dashoffset: 0
 
-.website-wrapper
+//.website-wrapper
   position: relative
+  z-index: 10
+  background: $dark-bg
   margin-bottom: 70rem
 
 .banner
@@ -341,6 +351,8 @@ svg
   overflow: hidden
   hr
     margin-bottom: 30px
+  h3
+    color: $white
 
 .title-area
   padding: 0 15px
@@ -396,89 +408,36 @@ hr
     span
       display: block
 
-//.btn
-  background: #40c1bb
-  background-image: -moz-linear-gradient($orange 0%, lighten($orange, 15%) 51%, $orange 100%)
-  background-image: -webkit-linear-gradient($orange 0%, lighten($orange, 15%) 51%, $orange 100%)
-  background-image: linear-gradient($orange 0%, lighten($orange, 15%) 51%, $orange 100%)
-  background-size: 100% 200%
-  color: #fff !important
-  padding: .2em 1em
-  margin: 10px auto
-  max-width: 150px
-  width: 100%
-  height: auto
-  text-align: center
-  font-size: 15px
-  font-family: "proxima-nova",sans-serif
-  font-weight: 400
-  font-style: normal
-  line-height: 2.5em
-  display: block
-  cursor: pointer
-  clear: both
-  -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
-  box-sizing: border-box
-  border: 0
-  border-radius: 5px
-  +transition
-  &:hover
-    background-position: bottom center
-
-#about
-  position: relative
-  background: $orange
-  .content-title
-    position: sticky
-    top: 0
-    height: 100%
-    background: $orange
-    color: $white
-    hr
-      background: #e69d00
-  .portrait
-    background: url(images/Chris-OBrien.jpg) no-repeat top center
-    background-size: cover
-    width: 250px
-    height: 250px
-    margin: 35px auto 0
-    border-radius: 50%
-  article
-    background: $white
-  .about-content
-    padding: 10%
-    p:not(:first-child)
-      padding: 15px 0
-    strong
-      color: $orange
-      font-weight: 400
-      padding: 0 5px
-      font-size: 18px
-      &:first-of-type
-        padding-left: 0
-  .social
-    text-align: left
-    margin-top: 15px
-  h4
-    padding-top: 5rem
-    overflow: hidden
-    position: relative
-    //&::before
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      height: 1px
+.about
+  padding: 20rem 0
+  &--top
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      max-width: 400px
       width: 100%
-      background: rgba($gray,.075)
-
-.about-title
-  margin: 40px 0 !important
+      height: auto
+  &--title
+    padding-left: 7%
+    margin-left: 7%
+    position: relative
+    &::before
+      content: ''
+      background: $orange
+      width: 3px
+      height: 150px
+      position: absolute
+      left: 0
+  &--content
+    padding: 15rem 1.5rem
+    float: none
+    margin: auto
 
 #portfolio
-  background: #fdfdfd
+  background: $dark-bg
   padding: 0 0 120px
   .grid-container
     max-width: 1530px
@@ -543,7 +502,7 @@ hr
   &.banner
     position: relative
   &--logo
-    margin: auto
+    margin: 10rem auto
     text-align: center
     position: relative
     z-index: 5
@@ -553,8 +512,8 @@ hr
 .details
   font-weight: 400
   > div
-    border-top: 1px solid $orange
-    border-bottom: 1px solid $orange
+    border-top: 1px solid $red
+    border-bottom: 1px solid $red
     padding: 4rem 0
     font-size: 2rem
     display: -webkit-flex
@@ -576,11 +535,11 @@ hr
   padding: 5rem 0
 
 #contact
-  position: fixed
-  bottom: 0
-  left: 0
-  right: 0
-  z-index: -200
+  //position: fixed
+  // bottom: 0
+  // left: 0
+  // right: 0
+  // z-index: -200
   background: $dark
   color: $white
   text-align: center
@@ -704,8 +663,6 @@ footer
 @media only screen and (max-width: 740px)
   .patient-single
     width: 100% !important
-  // body, html
-  //   font-size: 95%
   header
     position: absolute
     background-color: transparent
@@ -719,15 +676,23 @@ footer
     font-size: 3.3em
   h3
     font-size: 1.2em
-  #about
-    .content-title
-      position: relative
-    .flex
+  .about
+    &--top
       flex-direction: column
-    .about-content
-      line-height: 30px
-    .social
-      margin-bottom: 20px
+    &--title
+      padding: 5rem 0 0
+      margin: 6rem 0 0
+      text-align: center
+      &::before
+        content: ''
+        background: $red
+        width: 200px
+        height: 3px
+        top: 0
+        right: 0
+        margin: auto
+    &--content
+      padding: 7rem 1.5rem
   .title-area
     h1
       line-height: 40px
@@ -755,13 +720,6 @@ footer
 /*MOBILE
 
 @media only screen and (max-width: 960px) and (min-width: 740px)
-  #about
-    .content-title
-      position: relative
-    .flex
-      flex-direction: column
-  .about-title
-    margin: 25px 0 15px !important
   #portfolio
     ul
       li
@@ -774,11 +732,6 @@ footer
 /*TABLET
 
 @media only screen and (max-width: 1024px) and (min-width: 960px)
-  #about
-    .content-title
-      position: relative
-    .flex
-      flex-direction: column
   #portfolio
     ul
       li

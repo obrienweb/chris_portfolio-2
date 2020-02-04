@@ -83,7 +83,7 @@ a:hover {
 
 p {
   padding: 1rem 0;
-  line-height: 2.2;
+  line-height: 2.25;
 }
 
 ul, ol {
@@ -425,8 +425,10 @@ hr {
   align-items: center;
   justify-content: center;
 }
-.btn span {
-  display: none;
+.btn > span {
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-in-out;
 }
 .btn::after {
   content: "";
@@ -436,11 +438,11 @@ hr {
   width: auto;
 }
 .btn:hover span, .btn:focus span {
-  display: block;
+  transform: scale(1);
 }
 
 .about {
-  padding: 20rem 0;
+  margin: 20rem 0 10rem;
 }
 .about--top {
   display: -webkit-flex;
@@ -458,12 +460,16 @@ hr {
   padding-left: 7%;
   margin-left: 7%;
   position: relative;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
 }
 .about--title::before {
   content: "";
   background: #ffae00;
   width: 3px;
-  height: 150px;
+  height: 250px;
   position: absolute;
   left: 0;
 }
@@ -475,7 +481,7 @@ hr {
 
 #portfolio {
   background: #0A0A0A;
-  padding: 0 0 120px;
+  padding: 0 0 30rem;
 }
 #portfolio .grid-container {
   max-width: 1530px;
@@ -553,8 +559,8 @@ hr {
   font-weight: 400;
 }
 .details > div {
-  border-top: 1px solid #D44C56;
-  border-bottom: 1px solid #D44C56;
+  border-top: 1px solid #ffae00;
+  border-bottom: 1px solid #ffae00;
   padding: 4rem 0;
   font-size: 2rem;
   display: -webkit-flex;
@@ -577,36 +583,6 @@ hr {
 #project-content {
   color: #141414;
   padding: 5rem 0;
-}
-
-#contact {
-  background: #141414;
-  color: #fff;
-  text-align: center;
-  overflow: hidden;
-}
-#contact .content-title {
-  padding-bottom: 50px;
-}
-#contact .contact-content {
-  font-size: 1.2rem;
-  line-height: 2;
-}
-#contact .contact-content a {
-  padding: 0.5em 0;
-}
-#contact .contact-content a:hover, #contact .contact-content a:focus {
-  color: #ffae00;
-}
-#contact .social {
-  margin-top: 2rem;
-}
-#contact .form {
-  background: #fff;
-  padding: 30px;
-  border-radius: 20px 20px 0 0;
-  margin-left: 25%;
-  margin-right: 25%;
 }
 
 .social {
@@ -641,34 +617,23 @@ hr {
 }
 
 footer {
-  display: none;
-  background-color: dark;
-  color: white;
-  padding: 20px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  font-size: 0.875em;
+  font-size: 1.7rem;
+  padding: 10rem 0;
+  text-align: center;
+  background: #fff;
+  color: #131313;
 }
-
-.footer-content {
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 footer a:link, footer a:visited {
-  color: white;
+  color: #131313;
 }
 footer a:hover {
   color: #ffae00;
 }
-footer li {
-  padding: 5px 0;
+footer a::before {
+  display: none;
 }
-footer i {
-  color: #ffae00;
-  padding: 0 7px 0 0;
+footer p {
+  padding: 0;
 }
 
 /*---- START MEDIA QUERIES ---- */
@@ -699,6 +664,9 @@ footer i {
     font-size: 1.2em;
   }
 
+  .about {
+    margin: 10rem 0;
+  }
   .about--top {
     flex-direction: column;
   }
@@ -709,7 +677,7 @@ footer i {
   }
   .about--title::before {
     content: "";
-    background: #D44C56;
+    background: #ffae00;
     width: 200px;
     height: 3px;
     top: 0;

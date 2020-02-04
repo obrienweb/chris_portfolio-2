@@ -104,7 +104,7 @@ a
 
 p
   padding: 1rem 0
-  line-height: 2.2
+  line-height: 2.25
   // text-align: justify
   // text-justify: inter-word
 
@@ -398,18 +398,20 @@ hr
   display: flex
   align-items: center
   justify-content: center
-  span
-    display: none
+  > span
+    transform: scale(0)
+    transform-origin: left
+    transition: transform .4s ease-in-out
   &::after
     content: '\f35d'
     font-family: $awesome
   &:hover, &:focus
     width: auto
     span
-      display: block
+      transform: scale(1)
 
 .about
-  padding: 20rem 0
+  margin: 20rem 0 10rem
   &--top
     display: -webkit-flex
     display: -ms-flex
@@ -424,11 +426,15 @@ hr
     padding-left: 7%
     margin-left: 7%
     position: relative
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    align-items: center
     &::before
       content: ''
       background: $orange
       width: 3px
-      height: 150px
+      height: 250px
       position: absolute
       left: 0
   &--content
@@ -438,7 +444,7 @@ hr
 
 #portfolio
   background: $dark-bg
-  padding: 0 0 120px
+  padding: 0 0 30rem
   .grid-container
     max-width: 1530px
   ul
@@ -512,8 +518,8 @@ hr
 .details
   font-weight: 400
   > div
-    border-top: 1px solid $red
-    border-bottom: 1px solid $red
+    border-top: 1px solid $orange
+    border-bottom: 1px solid $orange
     padding: 4rem 0
     font-size: 2rem
     display: -webkit-flex
@@ -534,7 +540,7 @@ hr
   color: $dark
   padding: 5rem 0
 
-#contact
+//#contact
   //position: fixed
   // bottom: 0
   // left: 0
@@ -632,7 +638,7 @@ hr
 #wuf-adv
   display: none
 
-footer
+//footer
   display: none
   background-color: dark
   color: white
@@ -642,20 +648,29 @@ footer
   width: 100%
   font-size: 0.875em
 
-.footer-content
+//.footer-content
   max-width: 1170px
   margin: 0 auto
   padding: 0 20px
 
 footer
+  font-size: 1.7rem
+  padding: 10rem 0
+  text-align: center
+  background: $white
+  color: #131313
   a
     &:link, &:visited
-      color: white
+      color: #131313
     &:hover
       color: $orange
-  li
+    &::before
+      display: none
+  p
+    padding: 0
+  //li
     padding: 5px 0
-  i
+  //i
     color: $orange
     padding: 0 7px 0 0
 
@@ -677,6 +692,7 @@ footer
   h3
     font-size: 1.2em
   .about
+    margin: 10rem 0
     &--top
       flex-direction: column
     &--title
@@ -685,7 +701,7 @@ footer
       text-align: center
       &::before
         content: ''
-        background: $red
+        background: $orange
         width: 200px
         height: 3px
         top: 0

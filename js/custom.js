@@ -31,13 +31,31 @@ jQuery(document).ready(function($) {
 	});
 
 	//Header adjust on Scroll
-	var scroll_pos = 0;
-	$(document).scroll(function() {
-	  scroll_pos = $(this).scrollTop();
-	  if(scroll_pos > 300) {
-	    $("header").css('background-color', 'rgba(20,20,20,0.70)');
-	  } else {
-	    $("header").css({'background-color' : 'none', 'transition' : 'all .5s ease'});
-	  }
+	// var scroll_pos = 0;
+	// $(document).scroll(function() {
+	//   scroll_pos = $(this).scrollTop();
+	//   if(scroll_pos > 300) {
+	//     $("header").css('background-color', 'rgba(20,20,20,0.70)');
+	//   } else {
+	//     $("header").css({'background-color' : 'none', 'transition' : 'all .5s ease'});
+	//   }
+	// });
+
+
+	$(function() {
+		var header = $("header");
+		$(window).scroll(function() {
+				var scroll = $(window).scrollTop();
+				if (scroll >= 100) {
+					$('.menu__toggler').css({
+							margin: '-5rem 0 0 0'
+					});
+				} else {
+						$('.menu__toggler').css({
+								margin: '-2.3rem 0 0 0'
+						});
+				}
+		});
 	});
+
 });

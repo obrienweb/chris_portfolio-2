@@ -17,41 +17,30 @@
 
 </head>
 <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
-  <header class="grid-100">
-    <div class="flex grid-container">
-			<div id="logo" class="hide-on-mobile">
-        <a itemprop="url" href="#home" title="Chris O'Brien">
-					<?xml version="1.0" encoding="UTF-8"?>
-					<svg enable-background="new 0 0 137 142" version="1.1" viewBox="0 0 137 142" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-							<path class="st0" d="m23.3 64.6c-5.7-5.7-8.6-12.9-8.6-21.4s2.9-15.5 8.6-21c5.8-5.5 12.9-8.2 21.4-8.2 4.8 0 9 0.8 12.5 2.3 3.6 1.5 7.3 4.2 11.3 8.1l9-9.9c-8.6-9.7-19.5-14.5-32.5-14.5s-23.7 4.2-32.2 12.5-12.8 18.8-12.8 31.3 4.2 22.8 12.5 31c8.4 8.2 18.9 12.2 31.6 12.2s23.4-4.9 32.3-14.8l-9.1-9.4c-3.8 3.6-7.5 6.2-11 7.9-3.5 1.6-7.7 2.5-12.6 2.5-7.9 0-14.7-2.9-20.4-8.6z"/>
-							<path class="st1" d="m122.5 98.5c0 8.5-2.9 15.6-8.6 21.6-5.7 5.9-12.7 8.9-21 8.9s-15.3-3-21.1-8.9c-5.7-5.9-8.6-13.1-8.6-21.6s2.9-15.6 8.6-21.6c5.7-5.9 12.7-8.9 21.1-8.9 8.3 0 15.3 3 21 8.9 5.7 6 8.6 13.2 8.6 21.6zm14.5 0c0-12.4-4.2-22.7-12.7-31s-18.9-12.4-31.4-12.4-23 4.1-31.4 12.4c-8.5 8.3-12.7 18.6-12.7 31s4.2 22.7 12.7 31 19 12.4 31.4 12.4 22.9-4.1 31.4-12.4c8.5-8.2 12.7-18.6 12.7-31z"/>
-					</svg>
-        </a>
-			</div>
 
-			<a class="open-nav hide-on-desktop hide-on-tablet" onclick="openNav()">&#9776;</a>
-			<div id="myNav" class="overlay">
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-				<div class="overlay-content">
-					<ul>
-						<li><a class="hvr-underline" href="index.html">Home</a></li>
-						<li><a class="hvr-underline" href="#about" onclick="closeNav()">About</a></li>
-            <li><a class="hvr-underline" href="#portfolio" onclick="closeNav()">Portfolio</a></li>
-            <li><a class="hvr-underline" href="#contact" onclick="closeNav()">Contact</a></li>
-					</ul>
+	<div class="menu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#portfolio" onclick="closeNav()">Portfolio</a></li>
+			<li><a href="#about" onclick="closeNav()">About</a></li>
+			<li><a href="#contact" onclick="closeNav()">Contact</a></li>
+		</ul>
+	</div>
+
+	<header class="homepage">
+		<div class="grid-container grid-parent relative align-center">
+			<!-- <div id="logo" class="grid-50 tablet-50 mobile-80 hide-on-mobile">
+				<a itemprop="url" href="#home" title="Chris O'Brien">
+					<img src="images/Chris-OBrien-logo.svg" alt="">
+				</a>
+			</div> -->
+			<div class="main-nav grid-50 tablet-50 mobile-100">
+				<div class="menu__toggler">
+					<span></span>
 				</div>
 			</div>
-
-      <nav id="nav" class="hide-on-mobile">
-        <ul>
-						<li><a class="hvr-underline" href="#home">Home</a></li>
-						<li><a class="hvr-underline" href="#about">About</a></li>
-            <li><a class="hvr-underline" href="#portfolio">Portfolio</a></li>
-            <li><a class="hvr-underline" href="#contact">Contact</a></li>
-        </ul>
-      </nav><!-- #/nav -->
-    </div>
-  </header>
+		</div>
+	</header>
 
   <section id="home" class="banner parallax-window" data-parallax="scroll" data-image-src="images/main-banner.jpg">
     <div class="title-area">
@@ -72,36 +61,7 @@
     </div>
   </section>
 
-	<section id="about" class="about">
-		<div class="grid-container">
-			<div class="about--top">
-				<div class="lax" data-lax-preset="lazy-120">
-					<img src="images/Chris-OBrien.jpg" alt="">
-				</div>
-				<div class="about--title lax" data-lax-preset="lazy-100">
-					<div>
-						<h2>Chris O’Brien</h2>
-						<h3>
-							Web / UI / UX Designer<br>
-							Front End Web Developer
-						</h3>
-					</div>
-				</div>
-			</div>
-			<div class="clear"></div>
-			<div class="about--content grid-50">
-				<p>My name is Chris O’Brien and I am a Southern California based Web Designer. I specialize in creating stunning web pages, effective email marketing campaigns, and eye catching banners. I have been in the field for 10 years and really enjoy working in the ever changing world of web design and development. I am a graduate of The Art Institute of California with a Bachelor of Science in Web Design and Interactive Media. In my free time, I enjoy playing dodgeball, video games, going to the beach, traveling, and listening to podcasts.</p>
-
-				<p>While working at NKP Medical Marketing, I expanded my knowledge in the field and I enjoyed the opportunity to try new designs and learn more about development. I work with a team to design and develop beautiful websites for plastic surgeons to showcase their work and expand their reach.</p>
-
-				<p>During my time at Knowledge Adventure, I gained a lot of experience with designing websites that incorporated game art themes into them to make them feel like part of the gaming experience. I also enjoyed creating graphic designs for promotions at E3 and video game trailers promoting our game apps.</p>
-
-				<a href="Chris-OBrien-Resume.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
-			</div>
-		</div>
-	</section>
-
-	<section id="portfolio" class="grid-100 grid-parent">
+	<section id="portfolio">
 		<div class="grid-container">
 			<div class="content-title grid-100 tablet-100 grid-parent">
 	      <h2>Portfolio</h2>
@@ -112,13 +72,19 @@
 				<ul class="gallery">
 					<li class="grid-33 tablet-50">
 						<a href="https://www.badermedical.com/" target="_blank">
-							<div class="portfolio-title">Bader Medical <i class="fa fa-external-link" aria-hidden="true"></i></div>
+							<div class="portfolio-title">
+								Bader Medical
+								<span>Web Designer</span>
+							</div>
 						</a>
 						<img src="images/bader.jpg" alt="Bader Medical" class="img-resp">
 					</li>
 					<li class="grid-33 tablet-50">
 						<a href="centralohioplasticsurgery.html">
-							<div class="portfolio-title">Central Ohio <i class="fa fa-external-link" aria-hidden="true"></i></div>
+							<div class="portfolio-title">
+								Central Ohio
+								<span>Web Developer</span>
+							</div>
 						</a>
 						<img src="images/central-ohio.jpg" alt="Central Ohio" class="img-resp">
 					</li>
@@ -168,6 +134,38 @@
 			</div>
 		</div>
   </section>
+
+	<section id="about" class="about">
+		<div class="grid-container">
+			<div class="about--top">
+				<div class="lax" data-lax-preset="lazy-100">
+					<img src="images/Chris-OBrien.jpg" alt="">
+				</div>
+				<div class="about--title lax" data-lax-preset="lazy-120">
+					<div>
+						<h2>Chris O’Brien</h2>
+						<h3>
+							Web / UI / UX Designer<br>
+							Front End Web Developer
+						</h3>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="about--content grid-50 tablet-60">
+				<p>My name is Chris O’Brien and I am a Southern California based Web Designer. I specialize in creating stunning web pages, effective email marketing campaigns, and eye catching banners. I have been in the field for 10 years and really enjoy working in the ever changing world of web design and development. I am a graduate of The Art Institute of California with a Bachelor of Science in Web Design and Interactive Media. In my free time, I enjoy playing dodgeball, video games, going to the beach, traveling, and listening to podcasts.</p>
+
+				<p>While working at NKP Medical Marketing, I expanded my knowledge in the field and I enjoyed the opportunity to try new designs and learn more about development. I work with a team to design and develop beautiful websites for plastic surgeons to showcase their work and expand their reach.</p>
+
+				<p>During my time at Knowledge Adventure, I gained a lot of experience with designing websites that incorporated game art themes into them to make them feel like part of the gaming experience. I also enjoyed creating graphic designs for promotions at E3 and video game trailers promoting our game apps.</p>
+
+				<div class="button lax" data-lax-preset="lazy-100">
+        	<a href="Chris-OBrien-Resume.pdf" target="_blank"><span data-hover="My Resume"><i class="fa fa-file-pdf-o"></i></span></a>
+				</div>
+
+			</div>
+		</div>
+	</section>
 
 	<footer id="contact" class="grid-100 grid-parent">
 		<div class="grid-container">

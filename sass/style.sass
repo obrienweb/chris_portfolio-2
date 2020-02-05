@@ -9,13 +9,15 @@ $font-stack: 'proxima-nova', sans-serif
 $awesome: fontawesome
 $font-size: 1.6rem
 
+$primary-color: #D44C56
+
 $black: #000
-$orange: #ffae00
+$red: #ffae00
 $dark: #141414
 $dark-bg: #0A0A0A
 $white: #fff
 $gray: #282828
-$light-gray: #e0e0e0
+$light-gray: #808080
 $red: #D44C56
 
 $small: 300px
@@ -23,6 +25,11 @@ $medium: 768px
 $tablet: 960px
 $desktop: 1024px
 $large: 1200px
+
+$buttons-size: 5rem
+$buttons-expand-width: 16rem
+$buttons-color: #b5bcc2
+$buttons-color-hover: #8196ab
 
 @function between($from, $to, $fromWidth, $toWidth)
   $slope: ($to - $from) / ($toWidth - $fromWidth)
@@ -57,6 +64,14 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+::selection
+  background: $primary-color
+  color: $white
+
+::-moz-selection
+  background: $primary-color
+  color: $white
+
 h1, h2, h3, h4
   line-height: 1.2
 
@@ -65,7 +80,7 @@ h1, h2
   font-weight: 100
 
 h1
-  font-size: 8rem
+  font-size: 10rem
   text-transform: uppercase
   //font-weight: 700
 
@@ -77,13 +92,46 @@ h2
 h3
   font-size: 1.5em
   font-weight: 300
-  color: #808080
+  color: rgba($white,.65)
 
 h4
   font-size: 1.375em
   font-weight: 600
 
 a
+  color: $primary-color
+  font-weight: 500
+  text-decoration: none
+  outline: none
+  -webkit-transition: all .5s ease-out
+  -moz-transition: all .5s ease-out
+  transition: all .5s ease-out
+  position: relative
+  padding-bottom: 5px
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 15%
+    height: 2px
+    background: $primary-color
+    transition: .5s all cubic-bezier(.68,-.55,.265,1.55)
+  &:visited, &:link
+    color: $black
+    text-decoration: none
+    outline: none
+    -webkit-transition: all .5s ease-out
+    -moz-transition: all .5s ease-out
+    transition: all .5s ease-out
+  &:hover, &:focus
+    color: $primary-color
+    text-decoration: none
+    outline: none
+    &::before
+      width: 100%
+
+//a
   color: #1174a6
   text-decoration: none
   outline: none
@@ -91,14 +139,14 @@ a
   -moz-transition: all .5s ease-out
   transition: all .5s ease-out
   &:visited, &:link
-    color: $orange
+    color: $red
     text-decoration: none
     outline: none
     -webkit-transition: all .5s ease-out
     -moz-transition: all .5s ease-out
     transition: all .5s ease-out
   &:hover
-    color: darken($orange, 20%)
+    color: darken($red, 20%)
     text-decoration: none
     outline: none
 
@@ -209,27 +257,41 @@ input, select, textarea
 header
   //background-color: rgba($dark, 0.7)
   width: 100%
-  padding: 10px 0
-  position: fixed
-  z-index: 100
+  padding: 5rem 0
+  //position: fixed
+  position: absolute
   top: 0
   #logo
+    position: relative
+    z-index: 10
     align-self: center
     a
-      display: block
+      display: inline-block
+      &::before
+        display: none
+    img
+      width: 70px
     svg
       width: 70px
       height: 61px
-      .st0
-        fill: $white
-      .st1
-        fill: $orange
+  &.homepage
+    .main-nav
+      margin-left: 50%
 
-nav
+.st0
+  fill: $white
+.st1
+  fill: $red
+
+.main-nav
+  display: flex
+  justify-content: flex-end
+
+//nav
   margin: 20px auto
   display: inline-block
 
-#nav
+//#nav
   margin: 0 auto
   transition: none
   width: 100%
@@ -278,7 +340,7 @@ nav
     display: inline-block
     transition: 0.3s
     &:hover, &:focus
-      color: $orange
+      color: $red
   .closebtn
     position: absolute
     top: 13px
@@ -291,7 +353,84 @@ nav
     text-align: center
     margin-top: 30px
 
-.hvr-underline
+/* MENU BUTTON */
+.menu__toggler
+  z-index: 999
+  height: 45px
+  width: 45px
+  margin: -2.3rem 0 0 0
+  outline: none
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  position: fixed
+  transition: margin .3s linear
+  span,
+  span::before,
+  span::after
+    content: ''
+    position: absolute
+    right: 0
+    width: 45px
+    height: 2px
+    background: $white
+    border-radius: 20px
+    transition: 500ms cubic-bezier(0.77, 0, 0.175, 1)
+  span
+    width: 25px
+  span::before
+    top: -12px
+  span::after
+    top: 12px
+  &:hover
+    span
+      width: 45px
+  &.active > span
+    background: transparent !important
+  &.active > span::before,
+  &.active > span::after
+    //background: #005c9c
+    top: 0px
+  &.active > span::before
+    transform: rotate(-225deg)
+  &.active > span::after
+    transform: rotate(225deg)
+
+/* SLIDING MENU PANEL */
+.menu
+  position: fixed
+  left: -100%
+  top: 0
+  //left: 0
+  z-index: 998
+  color: #005c9c
+  background: $dark-bg
+  //clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%)
+  width: 100%
+  height: 100%
+  padding: 15%
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  justify-content: center
+  transition: 400ms left cubic-bezier(0.77, 0, 0.175, 1)
+  &.active
+    left: 0
+  > ul
+    li
+      margin: 3rem 0
+      a
+        font-size: 7.5rem
+        font-weight: 100
+        color: $white
+        &::before
+          width: 0%
+        &:hover, &:focus
+          &::before
+            width: 100%
+
+//.hvr-underline
   display: inline-block
   vertical-align: middle
   -webkit-transform: translateZ(0)
@@ -309,7 +448,7 @@ nav
     left: 50%
     right: 50%
     bottom: 0
-    background: $orange
+    background: $red
     height: 4px
     -webkit-transition-property: left, right
     transition-property: left, right
@@ -330,7 +469,7 @@ svg
     stroke-dashoffset: 870
     animation: draw 4s linear forwards
   #O
-    stroke: $orange
+    stroke: $red
     animation-delay: .8s
 
 @keyframes draw
@@ -351,8 +490,9 @@ svg
   overflow: hidden
   hr
     margin-bottom: 30px
-  h3
-    color: $white
+    background: rgba($white,.5)
+  //h3
+    color: rgba($white,.75)
 
 .title-area
   padding: 0 15px
@@ -366,7 +506,7 @@ svg
 
 hr
   width: 90px
-  background: $orange
+  background: $red
   height: 2px
   border: 0
   text-align: center
@@ -385,8 +525,57 @@ hr
   flex-direction: column
   height: 100%
 
-.btn
-  border: 1px solid $orange
+
+.button
+  height: $buttons-size
+  width: $buttons-size
+  background: transparent
+  // margin-right: 15px
+  // float: left
+  border-radius: $buttons-size
+  transition: width 0.3s
+  overflow: hidden
+  border: 1px $primary-color solid
+  margin: auto
+  a
+    color: $white
+    font-size: 1.6rem
+    overflow: hidden
+    text-align: center
+    &::before
+      display: none
+    span
+      color: $white
+      display: inline-block
+      transition: opacity 0.3s ease 0s, transform 0.5s ease 0s
+      line-height: $buttons-size
+      font-size: 1.6rem
+      width: 100%
+      &:before
+        width: 100%
+        position: absolute
+        left: 0px
+        top: 200%
+        opacity: 0
+        content: attr(data-hover)
+        transform: translate3d(0,0,0)
+  &:hover
+    width: $buttons-expand-width
+    //background: $buttons-color-hover
+    a
+      //color: #f0f0f0
+      span
+        transform: translateY(-200%)
+        &:before
+          opacity: 1
+
+  //&.active
+    background: $buttons-color-hover
+    a
+      color: #f0f0f0
+
+//.btn
+  border: 1px solid $red
   border-radius: 50px
   width: auto
   padding: .5rem
@@ -411,13 +600,14 @@ hr
       transform: scale(1)
 
 .about
-  margin: 20rem 0 10rem
+  margin: 30rem 0 20rem
   &--top
     display: -webkit-flex
     display: -ms-flex
     display: flex
     align-items: center
     justify-content: center
+    margin-bottom: 10rem
     img
       max-width: 400px
       width: 100%
@@ -432,19 +622,36 @@ hr
     align-items: center
     &::before
       content: ''
-      background: $orange
-      width: 3px
-      height: 250px
+      background: $red
+      width: 2px
+      height: 200px
       position: absolute
       left: 0
+    h2
+      line-height: 1
+    h3
+      line-height: 1.35
   &--content
-    padding: 15rem 1.5rem
+    padding: 15rem 1.5rem 0
     float: none
     margin: auto
+  .button
+    margin: 5rem auto
 
 #portfolio
   background: $dark-bg
-  padding: 0 0 30rem
+  margin: 10rem 0 40rem
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: -20rem
+    left: 0
+    right: 0
+    width: 100%
+    height: 10rem
+    background: $dark-bg
+    background: linear-gradient(0deg, rgba($dark-bg,1) 0%, rgba($dark-bg,0) 100%)
   .grid-container
     max-width: 1530px
   ul
@@ -462,12 +669,13 @@ hr
           a
             visibility: visible
             opacity: 1
-            background-color: rgba($orange,.3)
+            background-color: rgba($black,.75)
+            border-color: $primary-color
             //box-shadow: 0px 0px 10px 0px rgba($dark,.15)
           .portfolio-title
             opacity: 1
             visibility: visible
-            transform: translateY(0)
+            transform: scale(1)
             //transform: translateX(0%)
             //span
               transform: scale(1)
@@ -485,10 +693,42 @@ hr
     margin: auto
     display: inline-block
     overflow: hidden
+    box-sizing: border-box
+    border: 2px solid transparent
+    &::before
+      display: none
   .portfolio-title
-    background: rgba($orange,.9)
+    overflow: hidden
+    margin: auto
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 2
+    color: #fff
+    font-size: 2.6rem
+    line-height: 30px
+    font-weight: 400
+    padding: 1.5rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    letter-spacing: .5px
+    transform: scale(0.6)
+    opacity: 0
+    transition: all .4s ease-in-out
+    span
+      font-size: 1.2rem
+      text-transform: uppercase
+      color: #999
+      display: block
+
+  //.portfolio-title
+    background: rgba($red,.9)
     text-align: center
-    font-size: 1.1em
+    font-size: 2rem
     line-height: 2.75
     font-weight: 300
     color: $white
@@ -517,9 +757,10 @@ hr
 
 .details
   font-weight: 400
+  padding: 0 2rem
   > div
-    border-top: 1px solid $orange
-    border-bottom: 1px solid $orange
+    border-top: 1px solid $red
+    border-bottom: 1px solid $red
     padding: 4rem 0
     font-size: 2rem
     display: -webkit-flex
@@ -531,7 +772,7 @@ hr
     font-weight: 300
   span
     font-size: 1.6rem
-    color: #808080
+    color: $light-gray
     font-weight: 300
     display: block
     margin-bottom: 1.2rem
@@ -558,7 +799,7 @@ hr
     a
       padding: 0.5em 0
       &:hover, &:focus
-        color: $orange
+        color: $red
   .social
     margin-top: 2rem
   .form
@@ -580,7 +821,7 @@ hr
       width: 55px
       box-sizing: border-box
       border-radius: 50%
-      background: $orange
+      background: $red
       color: $white
       display: flex
       justify-content: center
@@ -588,7 +829,7 @@ hr
       transition: all .4s ease-in-out
       &:hover, &:focus
         background: transparent
-        color: $orange
+        color: $red
         transform: scale(1.35)
 
 //[data-tooltip]
@@ -663,7 +904,7 @@ footer
     &:link, &:visited
       color: #131313
     &:hover
-      color: $orange
+      color: $red
     &::before
       display: none
   p
@@ -671,14 +912,14 @@ footer
   //li
     padding: 5px 0
   //i
-    color: $orange
+    color: $red
     padding: 0 7px 0 0
 
 /*---- START MEDIA QUERIES ----
-@media only screen and (max-width: 740px)
-  .patient-single
+@media only screen and (max-width: 767px)
+  //.patient-single
     width: 100% !important
-  header
+  //header
     position: absolute
     background-color: transparent
     >.grid-container, &.grid-100
@@ -688,22 +929,27 @@ footer
     #logo
       margin: 15px auto
   h1, h2
-    font-size: 3.3em
+    font-size: 3.5em
   h3
     font-size: 1.2em
+  header
+    padding: 7rem 2rem
+    box-sizing: border-box
+  .menu > ul li a
+    font-size: 5rem
   .about
     margin: 10rem 0
     &--top
       flex-direction: column
     &--title
       padding: 5rem 0 0
-      margin: 6rem 0 0
+      margin: 12rem 0 0
       text-align: center
       &::before
         content: ''
-        background: $orange
-        width: 200px
-        height: 3px
+        background: $red
+        width: 90px
+        height: 2px
         top: 0
         right: 0
         margin: auto
@@ -711,7 +957,7 @@ footer
       padding: 7rem 1.5rem
   .title-area
     h1
-      line-height: 40px
+      line-height: 50px
       padding-bottom: 10px
     img
       width: 85px
@@ -721,13 +967,32 @@ footer
     li:nth-of-type(2n+2)
       grid-row: auto
   #portfolio
+    margin-bottom: 30rem
     ul
       li
         transition-delay: 0s
   .social
     li
       margin: 0
-  #contact
+  .details
+    > div
+      width: 90%
+      flex-direction: column
+      text-align: center
+      > div
+        margin: 2rem auto
+  .spacer
+    margin: 15rem 0
+    .align-center
+      flex-direction: column
+  .mt-m
+    margin-top: 12rem
+  .project
+    margin-top: 0
+    &--logo
+      margin-top: 0
+      margin-bottom: 7rem
+  //#contact
     .form
       padding: 20px
       margin-left: 0
@@ -735,24 +1000,39 @@ footer
 
 /*MOBILE
 
-@media only screen and (max-width: 960px) and (min-width: 740px)
-  #portfolio
+@media only screen and (max-width: 960px) and (min-width: 768px)
+  h2
+    font-size: 7rem
+  .spacer
+    margin: 25rem 0
+  //#portfolio
     ul
       li
         transition-delay: 0s
-  #contact
+  .details
+    > div
+      font-size: 1.8rem
+
+  //#contact
     .form
       margin-left: 20%
       margin-right: 20%
 
 /*TABLET
 
+@media only screen and (max-width: 850px) and (min-width: 768px)
+  .details
+    .button
+      &:hover
+        width: 100%
+        max-width: $buttons-expand-width
+
 @media only screen and (max-width: 1024px) and (min-width: 960px)
-  #portfolio
+  //#portfolio
     ul
       li
         transition-delay: 0s
-  #contact
+  //#contact
     .form
       margin-left: 20%
       margin-right: 20%

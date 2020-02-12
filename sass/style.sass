@@ -151,7 +151,7 @@ a
     outline: none
 
 p
-  padding: 1rem 0
+  padding: 1.5rem 0
   line-height: 2.25
   // text-align: justify
   // text-justify: inter-word
@@ -748,12 +748,16 @@ hr
   &.banner
     position: relative
   &--logo
-    margin: 10rem auto
+    margin: 10rem auto 15rem
     text-align: center
     position: relative
     z-index: 5
+    img
+      max-width: 300px
   &--banner
     position: relative
+    max-width: 1850px
+    margin: auto
 
 .details
   font-weight: 400
@@ -776,6 +780,20 @@ hr
     font-weight: 300
     display: block
     margin-bottom: 1.2rem
+
+.center-image
+  max-width: 1344px
+  margin: auto
+  text-align: center
+
+.image-list
+  margin: 0 0 20rem
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: space-between
+  > div
+    padding: 0 .5rem
 
 #project-content
   color: $dark
@@ -971,6 +989,8 @@ footer
     ul
       li
         transition-delay: 0s
+  #portfolio ul.gallery li
+    margin: 1.5rem 0
   .social
     li
       margin: 0
@@ -992,11 +1012,11 @@ footer
     &--logo
       margin-top: 0
       margin-bottom: 7rem
-  //#contact
-    .form
-      padding: 20px
-      margin-left: 0
-      margin-right: 0
+  .image-list
+    flex-wrap: wrap
+    justify-content: center
+    > div
+      margin: 5rem auto
 
 /*MOBILE
 
@@ -1012,11 +1032,6 @@ footer
   .details
     > div
       font-size: 1.8rem
-
-  //#contact
-    .form
-      margin-left: 20%
-      margin-right: 20%
 
 /*TABLET
 

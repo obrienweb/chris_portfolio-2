@@ -108,7 +108,7 @@ a:hover::before, a:focus::before {
 
 p {
   padding: 1.5rem 0;
-  line-height: 2.25;
+  line-height: 2.5;
 }
 
 ul, ol {
@@ -157,7 +157,7 @@ ul, ol {
 }
 
 .spacer {
-  margin: 30rem 0;
+  margin: 40rem 0;
 }
 
 .padding {
@@ -254,6 +254,9 @@ header #logo img {
 header #logo svg {
   width: 70px;
   height: 61px;
+}
+header.homepage {
+  padding: 8.5rem 0;
 }
 header.homepage .main-nav {
   margin-left: 50%;
@@ -561,6 +564,7 @@ hr {
 }
 .about--title h3 {
   line-height: 1.35;
+  margin-top: 1.5rem;
 }
 .about--content {
   padding: 15rem 1.5rem 0;
@@ -667,7 +671,7 @@ hr {
   position: relative;
 }
 .project--logo {
-  margin: 10rem auto 15rem;
+  margin: 10rem auto 20rem;
   text-align: center;
   position: relative;
   z-index: 5;
@@ -681,9 +685,39 @@ hr {
   margin: auto;
 }
 
+.sofra-logo {
+  font-size: 7rem;
+  font-weight: 100;
+  letter-spacing: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10rem;
+}
+
+.sofra-bg {
+  background: url(images/sofra-bg.jpg) no-repeat center;
+  background-size: cover;
+  min-height: 1200px;
+  position: relative;
+  padding-top: 5rem;
+}
+.sofra-bg::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.sofra-bg > div {
+  margin-left: -20%;
+}
+
 .details {
   font-weight: 400;
   padding: 0 2rem;
+  margin-top: 30rem;
 }
 .details > div {
   border-top: 1px solid #D44C56;
@@ -882,6 +916,17 @@ footer p {
   }
   .image-list > div {
     margin: 5rem auto;
+  }
+
+  .sofra-logo {
+    margin-bottom: 20rem;
+  }
+
+  .sofra-bg {
+    min-height: 800px;
+  }
+  .sofra-bg > div {
+    margin: 0 15%;
   }
 }
 /*MOBILE */

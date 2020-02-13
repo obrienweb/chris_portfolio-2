@@ -152,7 +152,7 @@ a
 
 p
   padding: 1.5rem 0
-  line-height: 2.25
+  line-height: 2.5
   // text-align: justify
   // text-justify: inter-word
 
@@ -191,7 +191,7 @@ ul, ol
   display: none
 
 .spacer
-  margin: 30rem 0
+  margin: 40rem 0
 
 .padding
   padding: 0 1.5rem
@@ -275,6 +275,7 @@ header
       width: 70px
       height: 61px
   &.homepage
+    padding: 8.5rem 0
     .main-nav
       margin-left: 50%
 
@@ -631,6 +632,7 @@ hr
       line-height: 1
     h3
       line-height: 1.35
+      margin-top: 1.5rem
   &--content
     padding: 15rem 1.5rem 0
     float: none
@@ -748,7 +750,7 @@ hr
   &.banner
     position: relative
   &--logo
-    margin: 10rem auto 15rem
+    margin: 10rem auto 20rem
     text-align: center
     position: relative
     z-index: 5
@@ -759,9 +761,35 @@ hr
     max-width: 1850px
     margin: auto
 
+.sofra-logo
+  font-size: 7rem
+  font-weight: 100
+  letter-spacing: 20px
+  color: $white
+  text-transform: uppercase
+  margin-bottom: 10rem
+
+.sofra-bg
+  background: url(images/sofra-bg.jpg) no-repeat center
+  background-size: cover
+  min-height: 1200px
+  position: relative
+  padding-top: 5rem
+  &::before
+    content: ''
+    background: rgba($black,.4)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+  > div
+    margin-left: -20%
+
 .details
   font-weight: 400
   padding: 0 2rem
+  margin-top: 30rem
   > div
     border-top: 1px solid $red
     border-bottom: 1px solid $red
@@ -1017,6 +1045,12 @@ footer
     justify-content: center
     > div
       margin: 5rem auto
+  .sofra-logo
+    margin-bottom: 20rem
+  .sofra-bg
+    min-height: 800px
+    > div
+      margin: 0 15%
 
 /*MOBILE
 

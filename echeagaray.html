@@ -11,7 +11,6 @@
 		<link rel="stylesheet" type="text/css" href="sass/reset.css">
 		<link rel="stylesheet" type="text/css" href="sass/unsemantic-grid.css">
 		<link rel="stylesheet" type="text/css" media="all" href="style.css">
-		<link rel="stylesheet" type="text/css" media="all" href="css/aos.css">
 	  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://use.typekit.net/aiq4fdu.css">
 
@@ -46,28 +45,29 @@
 	</header>
 
 	<section class="project" class="banner">
-		<div class="project--logo lax" data-lax-preset="lazy-150">
-			<img src="images/echeagaray-logo.svg" alt="" class="img-resp">
+		<div class="project--logo lax" data-lax-preset="lazy-160">
+			<a class="plain" href="https://www.echeagarayplasticsurgery.com/" target="_blank">
+				<img src="images/echeagaray-logo.svg" alt="" class="img-resp">
+			</a>
 		</div>
-		<div class="project--banner tac lax" data-lax-preset="lazy-120">
-			<img src="images/echeagaray-banner.jpg" alt="" class="img-resp">
+		<div class="project--banner tac">
+			<a class="plain" href="https://www.echeagarayplasticsurgery.com/" target="_blank">
+				<img src="images/echeagaray-banner.jpg" alt="" class="img-resp hide-on-mobile">
+				<img src="images/echeagaray-banner-m.jpg" alt="" class="img-resp hide-on-desktop hide-on-tablet">
+			</a>
 		</div>
 	</section>
 
 	<section class="details spacer lax" data-lax-preset="lazy-100">
 		<div class="grid-container">
-			<div class="details--title grid-20 tablet-20">
+			<div class="details--title grid-25 tablet-25">
 				Details
 			</div>
-			<div class="grid-15 tablet-15">
-				<span>Year</span>
-				2019
-			</div>
-			<div class="grid-15 tablet-15">
+			<div class="grid-25 tablet-25">
 				<span>Type</span>
 				Website
 			</div>
-			<div class="grid-25 tablet-30">
+			<div class="grid-25 tablet-25">
 				<span>Role</span>
 				Front End Developer
 			</div>
@@ -79,29 +79,40 @@
 		</div>
 	</section>
 
-	<section class="spacer">
+	<section class="description spacer">
 		<div class="grid-container">
-			<div class="grid-50 tablet-50">
-				<div class="lax" data-lax-preset="lazy-150">
+			<div class="description--content grid-50 tablet-50">
+				<div class="lax" data-lax-preset="lazy-170">
 					<h2>The Client</h2>
+					<p>Jorge Echeagaray, M.D. is a board certified Plastic Surgeon and is based in Guadalajara, Mexico. As part of Dr. Echeagaray’s training, he gained experience at some of the most prestigious hospitals around the world.</p>
+					<h2>Challenge</h2>
+					<p>Create a modern website that is attractive to potential customers, increases traffic, and brings in more clients.</p>
+					<h2>Outcome</h2>
+					<p>A design and build that set the benchmark in terms of design quality for other websites going forward.</p>
 				</div>
 			</div>
-			<div class="grid-50 tablet-50 lax mt-m" data-lax-preset="lazy-50">
-				<p>Jorge Echeagaray, M.D. is a board certified Plastic Surgeon and is based in Guadalajara, Mexico. As part of Dr. Echeagaray’s training, he gained experience at some of the most prestigious hospitals around the world.</p>
+			<div class="prefix-10 grid-40 tablet-50 lax" data-lax-preset="lazy-50">
+				<a class="plain" href="https://www.echeagarayplasticsurgery.com/" target="_blank">
+					<img src="images/echeagaray-phone.png" alt="" class="img-resp">
+				</a>
 			</div>
 		</div>
 	</section>
 
 	<div class="center-image spacer lax" data-lax-preset="lazy-150">
 		<div class="padding">
-			<img src="images/echeagaray-procedures.jpg" alt="" class="img-resp">
+			<a class="plain" href="https://www.echeagarayplasticsurgery.com/" target="_blank">
+				<img src="images/echeagaray-procedures.jpg" alt="" class="img-resp">
+			</a>
 		</div>
 	</div>
 
 	<div class="spacer">
 		<div class="grid-container align-center">
-			<div class="grid-40 tablet-45 lax" data-lax-preset="lazy-100">
-				<img src="images/echeagaray-phone.png" alt="" class="img-resp">
+			<div class="grid-40 tablet-45 lax" data-lax-preset="lazy-150">
+				<a class="plain" href="https://www.echeagarayplasticsurgery.com/" target="_blank">
+					<img src="images/echeagaray-mobile-4.png" alt="" class="img-resp">
+				</a>
 			</div>
 			<div class="prefix-10 grid-55 tablet-50 mt-m">
 				<h2>About</h2>
@@ -113,7 +124,9 @@
 	<div class="spacer lax" data-lax-preset="lazy-50">
 		<div class="grid-container">
 			<div class="prefix-20">
-				<img src="images/echeagaray-tablet-landscape.png" alt="" class="img-resp">
+				<a class="plain" href="https://www.echeagarayplasticsurgery.com/" target="_blank">
+					<img src="images/echeagaray-tablet-landscape.png" alt="" class="img-resp">
+				</a>
 			</div>
 		</div>
 	</div>
@@ -136,9 +149,8 @@
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/aos.js"></script>
-  <script type="text/javascript" src="js/custom.js?v100218"></script>
-	<script type="text/javascript" src="js/lax.min.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+	<!-- <script type="text/javascript" src="js/lax.min.js"></script> -->
 
 	<script>
 		function openNav() {
@@ -147,20 +159,6 @@
 		function closeNav() {
 		  document.getElementById("myNav").style.width = "0%";
 		}
-	</script>
-
-	<script type="text/javascript">
-		 AOS.init({
-			 duration: 1200,
-			 once: true
-		 })
-		 $(function() {
-			AOS.init();
-		});
-
-		$(window).on('load', function() {
-			AOS.refresh();
-		});
 	</script>
 
 	<!-- laxxx initialise -->

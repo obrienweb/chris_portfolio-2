@@ -1,4 +1,6 @@
-/* Theme Name: Chris OBrien Web (chrisobrienweb.com) */
+/* Theme Name: Chris OBrien Web (chrisobrienweb.com)
+ * * Author: NKP Development Team
+ * * Template: twentytwenty */
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -22,7 +24,7 @@ html {
 body {
   font-family: "proxima-nova", sans-serif;
   font-size: 1.6rem;
-  color: #fff;
+  color: #fff !important;
   background: #0A0A0A;
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -72,12 +74,14 @@ a {
   color: #D44C56;
   font-weight: 500;
   text-decoration: none;
-  outline: none;
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   position: relative;
   padding-bottom: 5px;
+}
+a.plain::before {
+  display: none;
 }
 a::before {
   content: "";
@@ -157,7 +161,7 @@ ul, ol {
 }
 
 .spacer {
-  margin: 40rem 0;
+  margin: 35rem 0;
 }
 
 .padding {
@@ -481,13 +485,14 @@ hr {
 }
 
 .button {
+  background: none !important;
   height: 5rem;
   width: 5rem;
   background: transparent;
   border-radius: 5rem;
   transition: width 0.3s;
   overflow: hidden;
-  border: 1px #D44C56 solid;
+  border: 2px #D44C56 solid;
   margin: auto;
 }
 .button a {
@@ -498,6 +503,9 @@ hr {
 }
 .button a::before {
   display: none;
+}
+.button a i {
+  animation: bounce 1.5s infinite cubic-bezier(0.28, 0.84, 0.42, 1);
 }
 .button a span {
   color: #fff;
@@ -526,6 +534,29 @@ hr {
   opacity: 1;
 }
 
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-7px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-1px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
 .about {
   margin: 30rem 0 20rem;
 }
@@ -712,6 +743,7 @@ hr {
 }
 .sofra-bg > div {
   margin-left: -20%;
+  position: relative;
 }
 
 .details {
@@ -741,14 +773,44 @@ hr {
   margin-bottom: 1.2rem;
 }
 
+.description h2 {
+  font-size: 6rem;
+  margin-top: 4rem;
+}
+
 .center-image {
   max-width: 1344px;
   margin: auto;
   text-align: center;
 }
 
+.wireframes {
+  margin: 20rem 0 50rem;
+}
+.wireframes > * {
+  margin: 0 0.5rem;
+}
+
+.mfp-close-btn-in .mfp-close {
+  color: #fff !important;
+}
+
+.white-popup {
+  position: relative;
+  background: #000;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+.white-popup video {
+  width: 500px !important;
+  height: 90vh !important;
+}
+
 .image-list {
-  margin: 0 0 20rem;
+  max-width: 900px;
+  margin: 0 auto 20rem;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -814,6 +876,10 @@ footer p {
   padding: 0;
 }
 
+#wpadminbar a::before {
+  display: none;
+}
+
 /*---- START MEDIA QUERIES ---- */
 @media only screen and (max-width: 767px) {
   h1, h2 {
@@ -835,6 +901,9 @@ footer p {
 
   .about {
     margin: 10rem 0;
+  }
+  .about h2 {
+    font-size: 5rem;
   }
   .about--top {
     flex-direction: column;
@@ -906,11 +975,12 @@ footer p {
     margin-top: 0;
   }
   .project--logo {
-    margin-top: 0;
-    margin-bottom: 7rem;
+    margin-top: 15rem;
+    margin-bottom: 5rem;
   }
 
   .image-list {
+    margin: 0;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -918,15 +988,42 @@ footer p {
     margin: 5rem auto;
   }
 
-  .sofra-logo {
-    margin-bottom: 20rem;
-  }
-
   .sofra-bg {
-    min-height: 800px;
+    min-height: inherit;
+    padding: 5rem 0 15rem;
   }
   .sofra-bg > div {
     margin: 0 15%;
+  }
+
+  .wireframes {
+    margin: 15rem 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .wireframes > * {
+    margin: 1rem;
+  }
+  .wireframes > * img {
+    max-width: 80%;
+  }
+
+  .white-popup video {
+    width: 100% !important;
+  }
+
+  .description .grid-container {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+  }
+  .description h2 {
+    font-size: 5rem;
+  }
+  .description--content {
+    margin-top: 10rem;
+    order: 2;
   }
 }
 /*MOBILE */

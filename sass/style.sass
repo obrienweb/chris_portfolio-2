@@ -791,17 +791,20 @@ hr
     margin: auto
 
 .sofra-logo
-  font-size: 7rem
+  font-size: 10rem
   font-weight: 100
   letter-spacing: 20px
   color: $white
   text-transform: uppercase
-  margin-bottom: 10rem
+  //margin-bottom: 10rem
+
+//.phone-img
+  max-width: 35rem
 
 .sofra-bg
   background: url(images/sofra-bg.jpg) no-repeat center
   background-size: cover
-  min-height: 1200px
+  min-height: 800px
   position: relative
   padding-top: 5rem
   &::before
@@ -867,6 +870,12 @@ hr
   video
     width: 500px !important
     height: 90vh !important
+
+.app-video
+  padding: 0
+  overflow: hidden
+  video
+    height: 90vh
 
 .image-list
   max-width: 900px
@@ -1008,8 +1017,8 @@ footer
   //.sofra-logo
     margin-bottom: 20rem
   .sofra-bg
-    min-height: inherit
-    padding: 5rem 0 15rem
+    min-height: 500px
+    box-sizing: border-box
     > div
       margin: 0 15%
   .wireframes

@@ -12,7 +12,6 @@
 
 	<?php // custom for this theme ?>
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/parallax.min.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/custom.js"></script>
 
 	<script>
@@ -57,13 +56,6 @@
 			toggler.classList.toggle('active');
 			menu.classList.toggle('active');
 		}
-	</script>
-
-	<!-- Magnific Popup -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('.open-popup-link').magnificPopup({type:'inline',midClick: true});
-		});
 	</script>
 
 	<?php wp_footer(); ?>

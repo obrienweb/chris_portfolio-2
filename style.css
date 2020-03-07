@@ -717,18 +717,17 @@ hr {
 }
 
 .sofra-logo {
-  font-size: 7rem;
+  font-size: 10rem;
   font-weight: 100;
   letter-spacing: 20px;
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 10rem;
 }
 
 .sofra-bg {
   background: url(images/sofra-bg.jpg) no-repeat center;
   background-size: cover;
-  min-height: 1200px;
+  min-height: 800px;
   position: relative;
   padding-top: 5rem;
 }
@@ -806,6 +805,14 @@ hr {
 .white-popup video {
   width: 500px !important;
   height: 90vh !important;
+}
+
+.app-video {
+  padding: 0;
+  overflow: hidden;
+}
+.app-video video {
+  height: 90vh;
 }
 
 .image-list {
@@ -989,8 +996,8 @@ footer p {
   }
 
   .sofra-bg {
-    min-height: inherit;
-    padding: 5rem 0 15rem;
+    min-height: 500px;
+    box-sizing: border-box;
   }
   .sofra-bg > div {
     margin: 0 15%;

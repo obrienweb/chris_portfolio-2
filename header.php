@@ -20,7 +20,6 @@ global $nkp_client_info;
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/sass/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/sass/reset.css">
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/sass/unsemantic-grid.css">
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css//magnific-popup.css">
 	<!-- <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>"> -->
 	<link rel="stylesheet" href="https://use.typekit.net/aiq4fdu.css">
 

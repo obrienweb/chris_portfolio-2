@@ -67,11 +67,11 @@ body
   -moz-osx-font-smoothing: grayscale
 
 ::selection
-  background: $primary-color
+  background: #f87b84
   color: $white
 
 ::-moz-selection
-  background: $primary-color
+  background: #f87b84
   color: $white
 
 h1, h2, h3, h4
@@ -719,7 +719,7 @@ hr
     bottom: 0
     left: 0
     right: 0
-    visibility: hidden
+    //visibility: hidden
     opacity: 0
     margin: auto
     display: inline-block
@@ -738,7 +738,7 @@ hr
     right: 0
     z-index: 2
     color: #fff
-    font-size: 2.6rem
+    font-size: 3rem
     line-height: 30px
     font-weight: 400
     padding: 1.5rem
@@ -751,7 +751,7 @@ hr
     opacity: 0
     transition: all .4s ease-in-out
     span
-      font-size: 1.2rem
+      font-size: 1.4rem
       text-transform: uppercase
       color: #999
       display: block
@@ -822,7 +822,7 @@ hr
 .details
   font-weight: 400
   padding: 0 2rem
-  margin-top: 30rem
+  margin: 15rem 0
   > div
     border-top: 1px solid $red
     border-bottom: 1px solid $red
@@ -949,6 +949,11 @@ footer
     box-sizing: border-box
   .menu > ul li a
     font-size: 5rem
+  .title-area
+    h1
+      font-size: 3em
+    h3
+      font-size: 1.5em
   .about
     margin: 10rem 0
     h2
@@ -985,8 +990,24 @@ footer
     ul
       li
         transition-delay: 0s
-  #portfolio ul.gallery li
-    margin: 1.5rem 0
+  #portfolio
+    ul.gallery li
+      margin: 1.5rem 0
+      border: 2px solid transparent
+      transition: border .35s ease-out
+      &:hover, &:focus
+        border-color: $primary-color
+        a
+          background: none
+    a
+      border: 0
+      opacity: 1
+    .portfolio-title
+      transform: scale(1)
+      opacity: 1
+      padding: 2.5rem 1rem
+      top: auto
+      background: rgba($black,.75)
   .social
     li
       margin: 0
@@ -1014,8 +1035,8 @@ footer
     justify-content: center
     > div
       margin: 5rem auto
-  //.sofra-logo
-    margin-bottom: 20rem
+  .sofra-logo
+    font-size: 7rem
   .sofra-bg
     min-height: 500px
     box-sizing: border-box

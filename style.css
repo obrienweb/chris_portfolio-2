@@ -32,13 +32,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-moz-selection {
+  background: #f87b84;
+  color: #fff;
+}
+
 ::selection {
-  background: #D44C56;
+  background: #f87b84;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #D44C56;
+  background: #f87b84;
   color: #fff;
 }
 
@@ -74,8 +79,6 @@ a {
   color: #D44C56;
   font-weight: 500;
   text-decoration: none;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   position: relative;
   padding-bottom: 5px;
@@ -97,8 +100,6 @@ a:visited, a:link {
   color: #000;
   text-decoration: none;
   outline: none;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 a:hover, a:focus {
@@ -169,7 +170,6 @@ ul, ol {
 }
 
 .align-center {
-  display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   align-items: center;
@@ -230,8 +230,6 @@ img.right, img.alignright {
 }
 
 input, select, textarea {
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 
@@ -422,11 +420,19 @@ svg #C, svg #O {
   stroke-width: 15;
   stroke-dasharray: 870;
   stroke-dashoffset: 870;
-  animation: draw 4s linear forwards;
+  -webkit-animation: draw 4s linear forwards;
+          animation: draw 4s linear forwards;
 }
 svg #O {
   stroke: #D44C56;
-  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+@-webkit-keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes draw {
@@ -448,8 +454,6 @@ svg #O {
 
 .title-area {
   padding: 0 15px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #fff;
   text-align: center;
@@ -505,7 +509,8 @@ hr {
   display: none;
 }
 .button a i {
-  animation: bounce 1.5s infinite cubic-bezier(0.28, 0.84, 0.42, 1);
+  -webkit-animation: bounce 1.5s infinite cubic-bezier(0.28, 0.84, 0.42, 1);
+          animation: bounce 1.5s infinite cubic-bezier(0.28, 0.84, 0.42, 1);
 }
 .button a span {
   color: #fff;
@@ -532,6 +537,30 @@ hr {
 }
 .button:hover a span:before {
   opacity: 1;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-7px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-1px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }
 
 @keyframes bounce {
@@ -561,7 +590,6 @@ hr {
   margin: 30rem 0 20rem;
 }
 .about--top {
-  display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   align-items: center;
@@ -577,7 +605,6 @@ hr {
   padding-left: 7%;
   margin-left: 7%;
   position: relative;
-  display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   align-items: center;
@@ -654,7 +681,6 @@ hr {
   bottom: 0;
   left: 0;
   right: 0;
-  visibility: hidden;
   opacity: 0;
   margin: auto;
   display: inline-block;
@@ -675,7 +701,7 @@ hr {
   right: 0;
   z-index: 2;
   color: #fff;
-  font-size: 2.6rem;
+  font-size: 3rem;
   line-height: 30px;
   font-weight: 400;
   padding: 1.5rem;
@@ -689,7 +715,7 @@ hr {
   transition: all 0.4s ease-in-out;
 }
 #portfolio .portfolio-title span {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
   color: #999;
   display: block;
@@ -748,14 +774,13 @@ hr {
 .details {
   font-weight: 400;
   padding: 0 2rem;
-  margin-top: 30rem;
+  margin: 15rem 0;
 }
 .details > div {
   border-top: 1px solid #D44C56;
   border-bottom: 1px solid #D44C56;
   padding: 4rem 0;
   font-size: 2rem;
-  display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   align-items: center;
@@ -818,7 +843,6 @@ hr {
 .image-list {
   max-width: 900px;
   margin: 0 auto 20rem;
-  display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   justify-content: space-between;
@@ -906,6 +930,13 @@ footer p {
     font-size: 5rem;
   }
 
+  .title-area h1 {
+    font-size: 3em;
+  }
+  .title-area h3 {
+    font-size: 1.5em;
+  }
+
   .about {
     margin: 10rem 0;
   }
@@ -952,6 +983,25 @@ footer p {
 
   #portfolio ul.gallery li {
     margin: 1.5rem 0;
+    border: 2px solid transparent;
+    transition: border 0.35s ease-out;
+  }
+  #portfolio ul.gallery li:hover, #portfolio ul.gallery li:focus {
+    border-color: #D44C56;
+  }
+  #portfolio ul.gallery li:hover a, #portfolio ul.gallery li:focus a {
+    background: none;
+  }
+  #portfolio a {
+    border: 0;
+    opacity: 1;
+  }
+  #portfolio .portfolio-title {
+    transform: scale(1);
+    opacity: 1;
+    padding: 2.5rem 1rem;
+    top: auto;
+    background: rgba(0, 0, 0, 0.75);
   }
 
   .social li {
@@ -995,6 +1045,10 @@ footer p {
     margin: 5rem auto;
   }
 
+  .sofra-logo {
+    font-size: 7rem;
+  }
+
   .sofra-bg {
     min-height: 500px;
     box-sizing: border-box;
@@ -1020,7 +1074,6 @@ footer p {
   }
 
   .description .grid-container {
-    display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     flex-direction: column;
@@ -1056,5 +1109,3 @@ footer p {
 }
 /*960 DESKTOP */
 /*---- END MEDIA QUERIES ---- */
-
-/*# sourceMappingURL=style.css.map */

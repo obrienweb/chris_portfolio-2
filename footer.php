@@ -41,6 +41,24 @@
 		</script>
 	<?php endif; ?>
 
+	<?php if(is_front_page()) : ?>
+		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/lax.min.js"></script>
+
+		<!-- laxxx initialise -->
+		<script type="text/javascript">
+			window.onload = function() {
+				lax.setup() // init
+
+				const updateLax = () => {
+					lax.update(window.scrollY)
+					window.requestAnimationFrame(updateLax)
+				}
+
+				window.requestAnimationFrame(updateLax)
+			}
+		</script>
+	<?php endif; ?>
+
 	<script type="text/javascript">
 
 		/* Toggles on and off the 'active' class on the menu and the toggler button.fe*/

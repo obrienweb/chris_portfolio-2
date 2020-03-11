@@ -13,7 +13,7 @@
 
     <hr>
     <h1>Chris O'Brien</h1>
-    <h3>Web Designer & Developer</h3>
+    <h3>UI / UX Designer</h3>
   </div>
 </section>
 
@@ -30,7 +30,7 @@
           <a href="/sofra">
             <div class="portfolio-title">
               SOFRA
-              <span>UX/UI Design</span>
+              <span>UI / UX Design</span>
             </div>
           </a>
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sofra.jpg" alt="SOFRA" class="img-resp">
@@ -39,7 +39,7 @@
           <a href="/sandel">
             <div class="portfolio-title">
               Sandel Duggal
-              <span>Web Design</span>
+              <span>UI / UX Design</span>
             </div>
           </a>
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sandel.jpg" alt="Sandel Duggal" class="img-resp">
@@ -77,19 +77,18 @@
         <div>
           <h2>Chris O’Brien</h2>
           <h3>
-            Web / UI / UX Designer<br>
-            Front End Web Developer
+            UI / UX Designer
           </h3>
         </div>
       </div>
     </div>
     <div class="clear"></div>
     <div class="about--content grid-50 tablet-60">
-      <p>My name is Chris O’Brien and I am a Southern California based Web Designer. I specialize in creating stunning web pages, effective email marketing campaigns, and eye catching banners. I have been in the field for 10 years and really enjoy working in the ever changing world of web design and development. I am a graduate of The Art Institute of California with a Bachelor of Science in Web Design and Interactive Media. In my free time, I enjoy playing dodgeball, video games, going to the beach, traveling, and listening to podcasts.</p>
+      <p>My name is Chris O’Brien and I am a Southern California based UI / UX designer. I specialize in creating stunning web pages, effective email marketing campaigns, and eye catching banners. I have been in the field for over 10 years and really enjoy working in the ever changing world of web design and development. I am a graduate of The Art Institute of California with a Bachelor of Science in Web Design and Interactive Media. In my free time, I enjoy playing dodgeball, video games, going to the beach, traveling, and listening to podcasts.</p>
 
       <p>While working at NKP Medical Marketing, I expanded my knowledge in the field and I enjoyed the opportunity to try new designs and learn more about development. I work with a team to design and develop beautiful websites for plastic surgeons to showcase their work and expand their reach.</p>
 
-      <p>During my time at Knowledge Adventure, I gained a lot of experience with designing websites that incorporated game art themes into them to make them feel like part of the gaming experience. I also enjoyed creating graphic designs for promotions at E3 and video game trailers promoting our game apps.</p>
+      <p>During my time at Knowledge Adventure, I gained experience with designing websites that incorporated game art themes into them to make them feel like part of the gaming experience. I also enjoyed creating graphic designs for promotions at E3 and video game trailers promoting our game apps.</p>
 
       <div class="button lax" data-lax-preset="lazy-100">
         <a href="<?php echo get_stylesheet_directory_uri(); ?>/Chris-OBrien-Resume.pdf" target="_blank"><span data-hover="My Resume"><i class="fa fa-file-pdf-o"></i></span></a>

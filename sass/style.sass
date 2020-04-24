@@ -92,11 +92,15 @@ h2
   //font-weight: 700
 
 h3
+  font-size: 4rem
+  font-weight: 300
+
+h4
   font-size: 1.5em
   font-weight: 300
   color: rgba($white,.65)
 
-h4
+h5
   font-size: 1.375em
   font-weight: 600
 
@@ -659,7 +663,7 @@ hr
       left: 0
     h2
       line-height: 1
-    h3
+    h4
       line-height: 1.35
       margin-top: 1.5rem
   &--content
@@ -842,9 +846,13 @@ hr
     display: block
     margin-bottom: 1.2rem
 
+.overview
+  max-width: 70rem
+  h3
+    margin-top: 4rem
+
 .description
   margin: auto
-  max-width: 70rem
   h2
     font-size: 6rem
     margin-top: 4rem
@@ -858,6 +866,10 @@ hr
   margin: 20rem 0 50rem
   > *
     margin: 0 .5rem
+
+.flowchart img
+  max-width: 85rem
+  width: 100%
 
 .mfp-close-btn-in .mfp-close
   color: $white !important
@@ -944,7 +956,7 @@ footer
 @media only screen and (max-width: 767px)
   h1, h2
     font-size: 3.5em
-  h3
+  h4
     font-size: 1.2em
   header
     padding: 7rem 2rem
@@ -954,7 +966,7 @@ footer
   .title-area
     h1
       font-size: 3em
-    h3
+    h4
       font-size: 1.5em
   .about
     margin: 10rem 0
@@ -1036,7 +1048,9 @@ footer
     flex-wrap: wrap
     justify-content: center
     > div
-      margin: 5rem auto
+      margin: .5rem 0
+    img
+      max-width: 150px
   .sofra-logo
     font-size: 7rem
   .sofra-bg

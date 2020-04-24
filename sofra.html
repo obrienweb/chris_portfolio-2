@@ -46,7 +46,7 @@
 	</header>
 
 	<section class="project" class="banner">
-		<div class="project--logo lax" data-lax-preset="lazy-200">
+		<div class="project--logo lax" data-lax-preset="lazy-100">
 			<div class="sofra-logo">
 				SOFRA
 			</div>
@@ -78,17 +78,20 @@
 		</div>
 	</section>
 
-	<section class="description spacer">
+	<section class="description overview spacer">
 		<div class="grid-container">
 			<div class="description--content">
+				<div class="tac lax" data-lax-preset="lazy-70">
+					<h2>Overview</h2>
+				</div>
 				<div class="lax" data-lax-preset="lazy-170">
-					<h2>The Client</h2>
+					<h3>The Client</h3>
 					<p>SOFRA is personal project of a furniture app that allows users to shop for furniture.</p>
-					<h2>Challenge</h2>
+					<h3>Challenge</h3>
 					<p>Design a mobile-centric shop that showcases the items and goes through the purchasing process.</p>
-					<h2>Process</h2>
+					<h3>Process</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-					<h2>Outcome</h2>
+					<h3>Outcome</h3>
 					<p>An easy to use e-commerce app to showcase furniture that SOFRA is selling.</p>
 				</div>
 			</div>
@@ -97,16 +100,16 @@
 
 	<div class="spacer lax" data-lax-preset="lazy-50">
 		<div class="image-list">
-			<div class="lax" data-lax-preset="lazy-100">
+			<div class="lax" data-lax-preset="lazy-50">
 				<img src="images/sofra-home.png" alt="" class="img-resp">
 			</div>
-			<div class="lax" data-lax-preset="lazy-300">
+			<div class="lax" data-lax-preset="lazy-100">
 				<img src="images/sofra-shop.png" alt="" class="img-resp">
 			</div>
-			<div class="lax" data-lax-preset="lazy-300">
+			<div class="lax" data-lax-preset="lazy-150">
 				<img src="images/sofra-details.png" alt="" class="img-resp">
 			</div>
-			<div class="lax" data-lax-preset="lazy-300">
+			<div class="lax" data-lax-preset="lazy-200">
 				<img src="images/sofra-checkout.png" alt="" class="img-resp">
 			</div>
 		</div>
@@ -139,25 +142,25 @@
 			<h2>High Fidelity Wireframes</h2>
 		</div>
 		<div class="image-list">
-			<div class="lax" data-lax-preset="lazy-100">
+			<div class="lax" data-lax-preset="lazy-25">
 				<img src="images/Sofra-hifi-login.png" alt="" class="img-resp">
 			</div>
-			<div class="lax" data-lax-preset="lazy-300">
+			<div class="lax" data-lax-preset="lazy-50">
 				<img src="images/Sofra-hifi-landing.png" alt="" class="img-resp">
 			</div>
-			<div class="lax" data-lax-preset="lazy-300">
+			<div class="lax" data-lax-preset="lazy-75">
 				<img src="images/Sofra-hifi-listing.png" alt="" class="img-resp">
 			</div>
-			<div class="lax" data-lax-preset="lazy-300">
+			<div class="lax" data-lax-preset="lazy-100">
 				<img src="images/Sofra-hifi-product-details.png" alt="" class="img-resp">
 			</div>
-			<div class="lax" data-lax-preset="lazy-300">
+			<div class="lax" data-lax-preset="lazy-125">
 				<img src="images/Sofra-hifi-cart.png" alt="" class="img-resp">
 			</div>
-			<div class="lax" data-lax-preset="lazy-300">
+			<div class="lax" data-lax-preset="lazy-150">
 				<img src="images/Sofra-hifi-shipping.png" alt="" class="img-resp">
 			</div>
-			<div class="lax" data-lax-preset="lazy-300">
+			<div class="lax" data-lax-preset="lazy-175">
 				<img src="images/Sofra-hifi-profile.png" alt="" class="img-resp">
 			</div>
 		</div>
@@ -168,8 +171,8 @@
 			<div class="grid-100">
 				<h2>Flow Chart</h2>
 			</div>
-			<div class="grid-100lax" data-lax-preset="lazy-100">
-				<img src="images/sofra-flowchart.png" alt="" class="img-resp">
+			<div class="flowchart grid-100 lax" data-lax-preset="lazy-100">
+				<img src="images/sofra-flowchart.svg" alt="" class="img-resp">
 			</div>
 		</div>
 	</div>
@@ -179,10 +182,17 @@
 	<div class="spacer">
 		<div class="grid-container align-center">
 			<div class="grid-40 tablet-45 grid-parent lax" data-lax-preset="lazy-100">
-				<img src="images/sofra-shop.png" alt="" class="img-resp">
+				<div class="app-video grid-container relative tac">
+					<video controls autoplay loop>
+						<source src="media/Sofra.mp4" type="video/mp4">
+						<source src="media/Sofra.webm" type="video/webm">
+						<source src="media/Sofra.ogg" type="video/ogg">
+						Your browser does not support the video tag.
+					</video>
+				</div>
 			</div>
-			<div class="prefix-10 grid-55 tablet-50 mt-m">
-				<h2>Home</h2>
+			<div class="prefix-10 grid-55 tablet-50 tablet-prefix-5 mt-m">
+				<h3>Home</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
 			</div>
 		</div>
@@ -190,12 +200,19 @@
 
 	<div class="spacer">
 		<div class="grid-container align-center">
-			<div class="prefix-10 grid-55 tablet-50 mt-m">
-				<h2>Shopping</h2>
+			<div class="grid-55 suffix-10 tablet-50 tablet-suffix-5 mt-m">
+				<h3>Shopping</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
 			</div>
 			<div class="grid-40 tablet-45 grid-parent lax" data-lax-preset="lazy-100">
-				<img src="images/sofra-shop.png" alt="" class="img-resp">
+				<div class="app-video grid-container relative tac">
+					<video controls autoplay loop>
+						<source src="media/Sofra.mp4" type="video/mp4">
+						<source src="media/Sofra.webm" type="video/webm">
+						<source src="media/Sofra.ogg" type="video/ogg">
+						Your browser does not support the video tag.
+					</video>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -203,10 +220,17 @@
 	<div class="spacer">
 		<div class="grid-container align-center">
 			<div class="grid-40 tablet-45 grid-parent lax" data-lax-preset="lazy-100">
-				<img src="images/sofra-shop.png" alt="" class="img-resp">
+				<div class="app-video grid-container relative tac">
+					<video controls autoplay loop>
+						<source src="media/Sofra.mp4" type="video/mp4">
+						<source src="media/Sofra.webm" type="video/webm">
+						<source src="media/Sofra.ogg" type="video/ogg">
+						Your browser does not support the video tag.
+					</video>
+				</div>
 			</div>
-			<div class="prefix-10 grid-55 tablet-50 mt-m">
-				<h2>Checkout</h2>
+			<div class="prefix-10 grid-55 tablet-50 tablet-prefix-5 mt-m">
+				<h3>Checkout</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
 			</div>
 		</div>
@@ -214,12 +238,19 @@
 
 	<div class="spacer">
 		<div class="grid-container align-center">
-			<div class="prefix-10 grid-55 tablet-50 mt-m">
-				<h2>Account</h2>
+			<div class="grid-55 suffix-10 tablet-50 tablet-suffix-5 mt-m">
+				<h3>Account</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
 			</div>
 			<div class="grid-40 tablet-45 grid-parent lax" data-lax-preset="lazy-100">
-				<img src="images/sofra-shop.png" alt="" class="img-resp">
+				<div class="app-video grid-container relative tac">
+					<video controls autoplay loop>
+						<source src="media/Sofra.mp4" type="video/mp4">
+						<source src="media/Sofra.webm" type="video/webm">
+						<source src="media/Sofra.ogg" type="video/ogg">
+						Your browser does not support the video tag.
+					</video>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -243,7 +274,7 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
-	<!-- <script type="text/javascript" src="js/lax.min.js"></script> -->
+	<script type="text/javascript" src="js/lax.min.js"></script>
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 
 	<script>

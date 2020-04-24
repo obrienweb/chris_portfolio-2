@@ -60,12 +60,17 @@ h2 {
 }
 
 h3 {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+h4 {
   font-size: 1.5em;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.65);
 }
 
-h4 {
+h5 {
   font-size: 1.375em;
   font-weight: 600;
 }
@@ -593,7 +598,7 @@ hr {
 .about--title h2 {
   line-height: 1;
 }
-.about--title h3 {
+.about--title h4 {
   line-height: 1.35;
   margin-top: 1.5rem;
 }
@@ -771,9 +776,15 @@ hr {
   margin-bottom: 1.2rem;
 }
 
+.overview {
+  max-width: 70rem;
+}
+.overview h3 {
+  margin-top: 4rem;
+}
+
 .description {
   margin: auto;
-  max-width: 70rem;
 }
 .description h2 {
   font-size: 6rem;
@@ -791,6 +802,11 @@ hr {
 }
 .wireframes > * {
   margin: 0 0.5rem;
+}
+
+.flowchart img {
+  max-width: 85rem;
+  width: 100%;
 }
 
 .mfp-close-btn-in .mfp-close {
@@ -895,7 +911,7 @@ footer p {
     font-size: 3.5em;
   }
 
-  h3 {
+  h4 {
     font-size: 1.2em;
   }
 
@@ -911,7 +927,7 @@ footer p {
   .title-area h1 {
     font-size: 3em;
   }
-  .title-area h3 {
+  .title-area h4 {
     font-size: 1.5em;
   }
 
@@ -1020,7 +1036,10 @@ footer p {
     justify-content: center;
   }
   .image-list > div {
-    margin: 5rem auto;
+    margin: 0.5rem 0;
+  }
+  .image-list img {
+    max-width: 150px;
   }
 
   .sofra-logo {

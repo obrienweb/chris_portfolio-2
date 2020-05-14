@@ -166,7 +166,7 @@ ul, ol {
 }
 
 .spacer {
-  margin: 35rem 0;
+  margin: 35rem auto;
 }
 
 .padding {
@@ -238,6 +238,10 @@ input, select, textarea {
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
+}
+
+.mb10 {
+  margin-bottom: 10rem;
 }
 
 header {
@@ -783,9 +787,6 @@ hr {
   margin-top: 4rem;
 }
 
-.description {
-  margin: auto;
-}
 .description h2 {
   font-size: 6rem;
   margin-top: 4rem;
@@ -900,6 +901,9 @@ footer a::before {
 footer p {
   padding: 0;
 }
+footer .contact-content a {
+  margin: 0 0.5rem;
+}
 
 #wpadminbar a::before {
   display: none;
@@ -1012,14 +1016,30 @@ footer p {
   }
 
   .spacer {
-    margin: 15rem 0;
+    margin: 15rem auto;
   }
   .spacer .align-center {
     flex-direction: column;
   }
 
+  .order-2 {
+    order: 2;
+  }
+
   .mt-m {
     margin-top: 12rem;
+  }
+
+  .mt10-m {
+    margin-top: 10rem;
+  }
+
+  .mt17-m {
+    margin-top: 17rem;
+  }
+
+  .mb5-m {
+    margin-bottom: 5rem;
   }
 
   .project {
@@ -1042,8 +1062,13 @@ footer p {
     max-width: 150px;
   }
 
+  .sofra-hifi > div {
+    margin-top: 5rem;
+  }
+
   .sofra-logo {
     font-size: 7rem;
+    margin: 0 auto 20rem;
   }
 
   .sofra-bg {
@@ -1052,6 +1077,10 @@ footer p {
   }
   .sofra-bg > div {
     margin: 0 15%;
+  }
+
+  .sofra-images {
+    margin: 30rem auto;
   }
 
   .wireframes {
@@ -1091,7 +1120,7 @@ footer p {
   }
 
   .spacer {
-    margin: 25rem 0;
+    margin: 25rem auto;
   }
 
   .details > div {

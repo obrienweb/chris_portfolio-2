@@ -265,6 +265,11 @@ input, select, textarea
 .mb10
   margin-bottom: 10rem
 
+.lrg-grid
+  max-width: 160rem
+  margin-left: auto
+  margin-right: auto
+
 header
   //background-color: rgba($dark, 0.7)
   width: 100%
@@ -892,7 +897,9 @@ hr
   padding: 0
   overflow: hidden
   video
-    height: 90vh
+    max-height: 90vh
+    max-width: 40rem
+    width: 100%
 
 .image-list
   //max-width: 900px
@@ -903,6 +910,16 @@ hr
   justify-content: space-between
   > div
     padding: 0 .5rem
+
+.sofra-images
+  img
+    width: 100%
+    max-height: 80rem
+
+.sofra-hifi
+  img
+    width: 100%
+    max-height: 80rem
 
 #project-content
   color: $dark
@@ -960,6 +977,14 @@ footer
 
 /*---- START MEDIA QUERIES ----
 @media only screen and (max-width: 767px)
+  .mt10-m
+    margin-top: 10rem
+  .mb10-m
+    margin-bottom: 10rem
+  .mt20-m
+    margin-top: 20rem
+  .mt30-m
+    margin-top: 30rem
   h1, h2
     font-size: 3.5em
   h4
@@ -1086,6 +1111,9 @@ footer
       margin: 1rem
       img
         max-width: 80%
+  .personas
+    img
+      margin-top: 2rem
   .white-popup
     video
       width: 100% !important
@@ -1115,6 +1143,9 @@ footer
   .details
     > div
       font-size: 1.8rem
+  .personas
+    img
+      margin-top: 2rem
 
 /*TABLET
 
@@ -1126,6 +1157,9 @@ footer
         max-width: $buttons-expand-width
 
 @media only screen and (max-width: 1024px) and (min-width: 960px)
+  .personas
+    img
+      margin-top: 2rem
 
 
 /*960 DESKTOP

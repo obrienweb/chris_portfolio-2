@@ -14,13 +14,17 @@ $font-size: 1.6rem
 $primary-color: #D44C56
 
 $black: #000
-$red: #ffae00
+//$orange: #ffae00
 $dark: #141414
-$dark-bg: #0A0A0A
+// $dark-bg: #0A0A0A
+$dark-bg: #161517
 $white: #fff
 $gray: #282828
 $light-gray: #808080
 $red: #D44C56
+$dark-blue: #1e1f22
+$blue: #242837
+$shade: #747686
 
 $small: 300px
 $medium: 768px
@@ -61,6 +65,10 @@ body
   font-size: $font-size
   color: $white !important
   background: $dark-bg
+  // background: rgb(22,21,23)
+  // background: linear-gradient(0deg, rgba(22,21,23,1) 0%, rgba(50,49,51,1) 100%)
+  background-repeat: no-repeat
+  background-attachment: fixed
   font-weight: 300
   letter-spacing: .5px
   -webkit-font-smoothing: antialiased
@@ -510,6 +518,8 @@ svg
     background: rgba($white,.5)
   //h3
     color: rgba($white,.75)
+  .button
+    margin-top: 2rem
 
 .title-area
   padding: 0 15px
@@ -571,7 +581,7 @@ hr
       display: none
     i
       animation: bounce 1.5s infinite cubic-bezier(0.280, 0.840, 0.420, 1)
-      margin-right: 1rem
+      margin-left: 1rem
     span
       color: $white
       display: inline-block
@@ -651,6 +661,18 @@ hr
     span
       transform: scale(1)
 
+.divider
+  background: url(images/mesh-bg.jpg) no-repeat center fixed
+  background-size: cover
+  height: 25rem
+  width: 100%
+  box-shadow: inset 0 5px 20px rgba($black,.25)
+  position: relative
+  //&::before
+    content: ''
+    +absolute-center
+    background: rgba($black,.5)
+
 .about
   margin: 30rem 0 20rem
   &--top
@@ -684,15 +706,20 @@ hr
     h4
       line-height: 1.35
       margin-top: 1.5rem
+      color: $shade
   &--content
     padding: 15rem 1.5rem 0
     float: none
     margin: auto
   .button
     margin: 5rem auto
+  &--image
+    img
+      border-radius: 1rem
+
 
 #portfolio
-  background: $dark-bg
+  //background: $dark-bg
   margin: 10rem 0 40rem
   position: relative
   //&::before
@@ -706,7 +733,7 @@ hr
     background: $dark-bg
     background: linear-gradient(0deg, rgba($dark-bg,1) 0%, rgba($dark-bg,0) 100%)
   .grid-container
-    max-width: 1530px
+    max-width: 153rem
   ul
     &.gallery
       li
@@ -753,7 +780,7 @@ hr
   .portfolio-title
     overflow: hidden
     margin: auto
-    position: absolute
+    //position: absolute
     top: 0
     bottom: 0
     left: 0
@@ -770,7 +797,7 @@ hr
     align-items: center
     letter-spacing: .5px
     transform: scale(0.6)
-    opacity: 0
+    //opacity: 0
     transition: all .4s ease-in-out
     span
       font-size: 1.4rem
@@ -795,6 +822,79 @@ hr
     align-items: center
     padding: 0 15px
     transition: all .3s ease-in-out
+
+.skills
+  z-index: 5
+  position: relative
+  max-width: 155rem
+  margin: 0 auto
+  margin-top: -3rem
+
+@media only screen and (max-width: 50em)
+  .skills
+    margin-top: 5rem
+
+.skills__container
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: space-evenly
+  -ms-flex-pack: space-evenly
+  justify-content: space-evenly
+
+@media only screen and (max-width: 50em)
+  .skills__container
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+
+.skills__box
+  background: $dark-blue
+  width: 25%
+  padding: 5rem
+  border-radius: 1rem
+  border: 1px solid $dark-bg
+  box-shadow: 5px 10px 30px rgba($black, 0.05)
+
+@media only screen and (max-width: 125em)
+  .skills__box
+    width: 30%
+
+@media only screen and (max-width: 50em)
+  .skills__box
+    width: 70%
+    margin-bottom: 3rem
+
+@media only screen and (max-width: 37.5em)
+  .skills__box
+    width: 90%
+
+.skills__img
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  img
+    max-height: 7.5rem
+
+.skills__text
+  margin-top: 2rem
+
+  h2
+    font-size: 2.25rem
+    text-align: center
+    margin-bottom: .5rem
+    color: $shade
+    font-weight: 500
+
+  p
+    margin-bottom: 0
+    text-align: center
+    line-height: 1.5
 
 .project
   margin: 10rem 0
